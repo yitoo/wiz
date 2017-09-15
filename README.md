@@ -38,7 +38,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@recette.yitoo.io
 You can now deploy
 
 ````
-vendor/bin/dep deploy recette
-vendor/bin/dep deploy prod
+vendor/bin/dep deploy recette --branch master
+vendor/bin/dep deploy prod --branch master
 
 ````
