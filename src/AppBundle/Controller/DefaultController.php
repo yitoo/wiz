@@ -11,11 +11,34 @@ class DefaultController extends Controller
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+        return $this->render('default/index.html.twig');
+    }
+
+    /**
+     * @Route("/signup", name="signup", requirements={"method":"post'"})
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function signUpAction(Request $request)
+    {
+        $fullName = $request->request->get('fullName');
+        $email = $request->request->get('email');
+        $message = (new \Swift_Message('Hello Email'))
+            ->setFrom('virginie@workinzen.fr')
+            ->setTo($email)
+            ->setBody(
+                $this->renderView(
+                    ':emails:signup.html.twig',
+                    array('name' => $fullName)
+                ),
+                'text/html'
+            )
+        ;
+        $this->get('mailer')->send($message);
+
+        $this->addFlash('info', "Merci $fullName, nous vous tiendrons informé dès le lancement du service à l'adresse $email");
+        return $this->redirectToRoute('homepage');
     }
 }
