@@ -25,7 +25,7 @@ class DefaultController extends Controller
     {
         $fullName = $request->request->get('fullName');
         $email = $request->request->get('email');
-        $message = (new \Swift_Message('Hello Email'))
+        $message = (new \Swift_Message('WorkInZen'))
             ->setFrom('virginie@workinzen.fr', 'Virginie Plé')
             ->setTo($email)
             ->setBody(
