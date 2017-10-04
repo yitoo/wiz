@@ -38,7 +38,7 @@ class DefaultController extends Controller
         ;
         $this->get('mailer')->send($message);
 
-        $this->addFlash('info', "Merci $fullName, nous vous tiendrons informé dès le lancement du service à l'adresse $email");
+        $this->addFlash('info', "Merci $fullName, nous vous avons envoyé un email à l'adresse $email");
 
         return $this->redirectToRoute('homepage');
     }
