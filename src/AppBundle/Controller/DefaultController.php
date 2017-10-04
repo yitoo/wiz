@@ -26,7 +26,7 @@ class DefaultController extends Controller
         $fullName = $request->request->get('fullName');
         $email = $request->request->get('email');
         $message = (new \Swift_Message('Hello Email'))
-            ->setFrom('virginie@workinzen.fr')
+            ->setFrom('virginie@workinzen.fr', 'Virginie Plé')
             ->setTo($email)
             ->setBody(
                 $this->renderView(
@@ -39,6 +39,7 @@ class DefaultController extends Controller
         $this->get('mailer')->send($message);
 
         $this->addFlash('info', "Merci $fullName, nous vous tiendrons informé dès le lancement du service à l'adresse $email");
+
         return $this->redirectToRoute('homepage');
     }
 }
