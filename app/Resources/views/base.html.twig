@@ -2,9 +2,29 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8" />
-    <title>{% block title %}WorkInZen!{% endblock %}</title>
+    {% set title = "WorkInZen" %}
+    {% set description = "tout simlement" %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     <meta name="google-site-verification" content="O8e8w3lCJkLMjPtYuGwP_snLOBtWinaHVtG01jS_xyY" />
+
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{ description }}{% endblock %}">
+    <meta name="author" content="Workinzen">
+    <meta property="og:title" content="{% block ogTitle %}{{ title }}{% endblock %}" />
+    <meta property="og:type" content="{% block ogType %}website{% endblock %}" />
+    <meta property="og:url" content="{% block ogUrl %}https://workinzen.fr{% endblock %}" />
+    <meta property="og:image" content="{% block ogImage %}{{ app.request.schemeAndHttpHost ~ asset('images/workinzen-logo.png') }}{% endblock %}" />
+    <meta property="og:description" content="{% block ogDescription %}{{ description }}{% endblock %}" />
+    <meta property="og:site_name" content="{% block ogSiteName %}Workinzen{% endblock %}" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{% block twitterTitle %}{{ title }}{% endblock %}" />
+    <meta name="twitter:url" content="{% block twitterUrl %}https://workinzen.fr{% endblock %}" />
+    <meta name="twitter:description" content="{% block twitterDescription %}{{ description }}{% endblock %}" />
+    <meta name="twitter:image" content="{% block twitterImage %}{{ app.request.schemeAndHttpHost ~ asset('images/workinzen-logo.png') }}{% endblock %}" />
+    <meta name="twitter:image:alt" content="{% block twitterAltImage %}Workinzen logo{% endblock %}">
+    <meta name="twitter:site" content="@workinzen">
+    <meta name="twitter:creator" content="Workinzen">
 </head>
 <body>
     <header>
@@ -16,6 +36,40 @@
     {% endblock stylesheets %}
     {% block javascript %}
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59da0a1299fbef09"></script>
+        <script type="application/ld+json">
+         { "@context": "http://schema.org",
+             "@type": "Organization",
+             "name": "Workinzen",
+             "legalName" : "Workinzen SAS",
+             "url": "www.workinzen.fr",
+             "logo": "{{ app.request.schemeAndHttpHost ~ asset('images/workinzen-logo.png') }}",
+             "foundingDate": "2017",
+             "founders": [
+                 {
+                     "@type": "Person",
+                     "name": "Virginie PLÉ",
+                     "jobTitle": "CEO"
+                 }
+             ],
+             "address": {
+                 "@type": "PostalAddress",
+                 "streetAddress": "11 Avenue des champs élysées",
+                 "addressLocality": "75008",
+                 "postalCode": "PARIS",
+                 "addressCountry": "FR"
+             },
+             "contactPoint": {
+                 "@type": "ContactPoint",
+                 "contactType": "customer support",
+                 "telephone": "[+33 1 86 95 96 04]",
+                 "email": "virginie@workinzen.fr"
+             },
+             "sameAs": [
+                 "https://twitter.com/workinzen",
+                 "https://www.facebook.com/workinzen",
+                 "https://www.linkedin.com/company-beta/17953198"
+             ]}
+    </script>
     {% endblock %}
 </body>
 </html>
