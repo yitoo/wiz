@@ -11,8 +11,8 @@
       adipiscing elit sed do eiusmod.
     </h2>
     <ul class="button-list">
-      <li class=""><a class="tt-uc col-wh button" href="">Je suis un professionnel</a></li>
-      <li class=""><a class="tt-uc col-wh button" href="">Je suis une entreprise</a></li>
+      <li class=""><a class="tt-uc col-wh button call-to-action" href="{{ url('practitioner') }}">Je suis un professionnel</a></li>
+      <li class=""><a class="tt-uc col-wh button call-to-action" href="{{ url('company') }}">Je suis une entreprise</a></li>
     </ul>
   </div>
 </section>
@@ -27,31 +27,17 @@
           <img src="{{ asset('images/portrait1.png') }}" alt="portrait professionnel">
           <h3 class="mt-sm">Je suis un pro, je propose mes services</h3>
           <p class="mt-sm fs-sm1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, quos. Corrupti, ex magni voluptate molestias odit incidunt sit accusamus beatae ea repudiandae omnis expedita atque voluptas consectetur vel delectus officia, vitae, quibusdam. Temporibus illum fugit ad repudiandae, eveniet dolore inventore maiores neque iure porro, blanditiis sapiente hic, harum delectus cum.</p>
-          <a href="" class="mt-sm tt-uc col-wh button">Proposer mes services</a>
+          <a href="{{ url('practitioner') }}" class="mt-sm tt-uc col-wh button call-to-action">Proposer mes services</a>
         </article>
         <article class="user-description">
           <img src="{{ asset('images/portrait2.png') }}" alt="portrait entreprise">
           <h3 class="mt-sm">Je suis une entreprise, je cherche du bien-être</h3>
           <p class="mt-sm fs-sm2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, voluptatem dolorem facilis vitae sequi corporis doloribus aut tempora, est sunt fugit cumque praesentium fugiat iure provident rem iusto alias ipsam, aliquid vero asperiores error molestias eligendi totam. Eveniet iusto sit amet magnam, expedita minima perspiciatis assumenda, ratione quod vel culpa.</p>
-          <a href="" class="mt-sm tt-uc col-wh button">Demander un praticien</a>
+          <a href="{{ url('company') }}" class="mt-sm tt-uc col-wh button call-to-action">Demander un praticien</a>
         </article>
       </div>
     </div>
   </section>
-
-  <section class="email-block flex-center bfcol-gr col-wh">
-    <div class="email-content flex-spb">
-      <h1>Je suis un praticien</h1>
-      <h2 class="chapo col-dwh">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, aliquam repudiandae ab non rem ratione expedita nostrum, minima ipsa provident!</h2>
-      <form method="post" action="{{ url('signup') }}">
-        <div class="item-wrapper">
-          <input class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre adresse e-mail" type="email"/>
-          <button class="button valid-button" type="submit">OK</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
   <footer class="bgcol-dgr">
     <div class="brand-wrapper">
       <img class="footer-logo" src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo">
@@ -70,6 +56,3 @@
     </div>
   </footer>
 {% endblock %}
-{% block stylesheets %}
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-{% endblock stylesheets %}

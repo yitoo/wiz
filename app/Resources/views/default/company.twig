@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <section class="intro-block flex-center">
+    <div class="shadow"></div>
+    <div class="intro-content flex-spb col-wh">
+      <img src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo short">
+      <h1>Je suis une entreprise</h1>
+      <h2 class="chapo col-dwh">
+        Pour travailler dans un environnement saint et apaisant
+        ou vous voulez offrir, Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit sed do eiusmod.
+      </h2>
+      <form method="post" action="{{ url('company_signup') }}">
+        <div class="item-wrapper">
+          <input name="company" class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre entreprise" type="text"/>
+          <input name="email" class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre adresse e-mail" type="email"/>
+          <button class="button valid-button" type="submit">OK</button>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %}
