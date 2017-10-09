@@ -70,41 +70,49 @@
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   {% endblock stylesheets %}
   {% block javascript %}
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59da0a1299fbef09"></script>
-  <script type="application/ld+json">
-  { "@context": "http://schema.org",
-  "@type": "Organization",
-  "name": "Workinzen",
-  "legalName" : "Workinzen SAS",
-  "url": "https://www.workinzen.fr",
-  "logo": "{{ app.request.schemeAndHttpHost ~ asset('images/workinzen-logo.png') }}",
-  "foundingDate": "2017",
-  "founders": [
-    {
-      "@type": "Person",
-      "name": "Virginie PLÉ",
-      "jobTitle": "CEO"
-    }
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "11 Avenue des champs élysées",
-    "addressLocality": "75008",
-    "postalCode": "PARIS",
-    "addressCountry": "FR"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer support",
-    "telephone": "[+33 1 86 95 96 04]",
-    "email": "virginie@workinzen.fr"
-  },
-  "sameAs": [
-    "https://twitter.com/workinzen",
-    "https://www.facebook.com/workinzen",
-    "https://www.linkedin.com/company/workinzen"
-  ]}
-  </script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107774117-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-107774117-1');
+    </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59da0a1299fbef09"></script>
+    <script type="application/ld+json">
+    { "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Workinzen",
+    "legalName" : "Workinzen SAS",
+    "url": "https://www.workinzen.fr",
+    "logo": "{{ app.request.schemeAndHttpHost ~ asset('images/workinzen-logo.png') }}",
+    "foundingDate": "2017",
+    "founders": [
+      {
+        "@type": "Person",
+        "name": "Virginie PLÉ",
+        "jobTitle": "CEO"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "11 Avenue des champs élysées",
+      "addressLocality": "75008",
+      "postalCode": "PARIS",
+      "addressCountry": "FR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "[+33 1 86 95 96 04]",
+      "email": "virginie@workinzen.fr"
+    },
+    "sameAs": [
+      "https://twitter.com/workinzen",
+      "https://www.facebook.com/workinzen",
+      "https://www.linkedin.com/company/workinzen"
+    ]}
+    </script>
   {% endblock %}
 </body>
 </html>
