@@ -46,6 +46,7 @@
 <body>
   <header>
     <a href="{{ url('homepage') }}"><img src="{{ asset('images/workinzen-logo.png') }}" alt="Workinzen logo"></a>
+    <p class="col-dwh">Tout simplement</p>
   </header>
   {% block body %}{% endblock %}
   <div class="footer-shadow shadow"></div>
@@ -59,9 +60,9 @@
     </div>
     <div class="credit-wrapper flex-spb">
       <ul class="social">
-        <li class="tt-uc"><a class="col-wh" href="">FB</a></li>
-        <li class="tt-uc"><a class="col-wh" href="">TW</a></li>
-        <li class="tt-uc"><a class="col-wh" href="">Instagram</a></li>
+        <li class="tt-uc"><a class="col-wh" href=""><img src="{{ asset('images/facebook.png') }}" alt="follow us on facebook"></a></li>
+        <li class="tt-uc ml-xs"><a class="col-wh" href=""><img src="{{ asset('images/twitter.png') }}" alt="follow us on twitter"></a></li>
+        <li class="tt-uc ml-xs"><a class="col-wh" href=""><img src="{{ asset('images/linkedin.png') }}" alt="follow us on linkedin"></a></li>
       </ul>
       <p class="fs-sm tt-uc col-dwh">© 2017 Workinzen. Tous droits réservés</p>
     </div>

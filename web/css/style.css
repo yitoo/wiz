@@ -127,6 +127,9 @@ Atomic styles
 .mb-xs{
 	margin-bottom: 15px;
 }
+.ml-xs {
+	margin-left: 15px;
+}
 
 
 .flex-center{
@@ -176,6 +179,11 @@ header img {
 	margin-left: 50px;
 	margin-top : 20px;
 }
+header p {
+	margin-left: 55px;
+	letter-spacing: 1px;
+	font-size: 12px;
+}
 
 h1 {
 	font-size: 50px;
@@ -204,7 +212,7 @@ h3 {
 	position: relative;
 	padding-bottom: 75px;
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .practitioner-bg {
@@ -230,8 +238,8 @@ h3 {
 	width: 100%;
 }
 
-.opacity4 {
-	opacity: 0.4;
+.opacity5 {
+	opacity: 0.5;
 }
 
 .chapo, .button-list {
