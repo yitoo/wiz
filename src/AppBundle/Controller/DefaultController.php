@@ -93,4 +93,12 @@ class DefaultController extends Controller
     {
         return $this->render('default/signup_success.twig');
     }
+
+    /**
+     * @Route("/mentions-legales", name="legal_mentions")
+     */
+    public function legalMentionsAction()
+    {
+        return $this->render('default/legal_mentions.twig');
+    }
 }

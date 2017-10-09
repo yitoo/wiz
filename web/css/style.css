@@ -223,6 +223,10 @@ h3 {
 	background: url('../images/company.jpg') no-repeat center 0;
 }
 
+.subscription-success-bg {
+	background: url('../images/typewriter.jpg') no-repeat center 0;
+}
+
 .main-content{
 	height: 400px;
 	z-index: 1;
@@ -401,7 +405,7 @@ footer{
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	margin-left: 100px;
+	margin-left: 50px;
 	height: 100%;
 }
 
@@ -415,18 +419,17 @@ footer{
 }
 
 .contact-wrapper {
-	height: 40px;
 	margin-left: 25px;
 	-ms-flex-item-align: center;
 	align-self: center;
+	font-size: small;
 }
 
 .credit-wrapper {
 	-webkit-box-align: end;
 	-ms-flex-align: end;
 	align-items: flex-end;
-	margin-right: 100px;
-	height: 40px;
+	margin-right: 50px;
 	-ms-flex-item-align: center;
 	align-self: center;
 }
