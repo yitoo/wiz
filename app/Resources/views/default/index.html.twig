@@ -16,43 +16,22 @@
     </ul>
   </div>
 </section>
-
-<section class="user-block flex-center">
-  <div class="user-content flex-spb">
-    <h1 class="col-dgr">Le bien-être au travail,<br/>ça m'intéresse</h1>
-    <h2 class="chapo">Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit sed do eiusmod.</h2>
-      <div class="item-wrapper">
-        <article class="user-description">
-          <img src="{{ asset('images/portrait1.png') }}" alt="portrait professionnel">
-          <h3 class="mt-sm">Je suis un pro, je propose mes services</h3>
-          <p class="mt-sm fs-sm1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, quos. Corrupti, ex magni voluptate molestias odit incidunt sit accusamus beatae ea repudiandae omnis expedita atque voluptas consectetur vel delectus officia, vitae, quibusdam. Temporibus illum fugit ad repudiandae, eveniet dolore inventore maiores neque iure porro, blanditiis sapiente hic, harum delectus cum.</p>
-          <a href="{{ url('practitioner') }}" class="mt-sm tt-uc col-wh button call-to-action">Proposer mes services</a>
-        </article>
-        <article class="user-description">
-          <img src="{{ asset('images/portrait2.png') }}" alt="portrait entreprise">
-          <h3 class="mt-sm">Je suis une entreprise, je cherche du bien-être</h3>
-          <p class="mt-sm fs-sm2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, voluptatem dolorem facilis vitae sequi corporis doloribus aut tempora, est sunt fugit cumque praesentium fugiat iure provident rem iusto alias ipsam, aliquid vero asperiores error molestias eligendi totam. Eveniet iusto sit amet magnam, expedita minima perspiciatis assumenda, ratione quod vel culpa.</p>
-          <a href="{{ url('company') }}" class="mt-sm tt-uc col-wh button call-to-action">Demander un praticien</a>
-        </article>
-      </div>
+<div class="footer-shadow shadow"></div>
+<footer>
+  <div class="brand-wrapper">
+    <img class="footer-logo" src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo">
+    <div class="contact-wrapper flex-spb">
+      <p class="contact-name tt-uc col-wh">Workinzen</p>
+      <a class="col-dwh" href="mailto:contact@workinzen.fr">contact@workinzen.fr</a>
     </div>
-  </section>
-  <footer class="bgcol-dgr">
-    <div class="brand-wrapper">
-      <img class="footer-logo" src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo">
-      <div class="contact-wrapper flex-spb">
-        <p class="contact-name tt-uc col-wh">Workinzen</p>
-        <a class="col-lgr" href="mailto:contact@workinzen.fr">contact@workinzen.fr</a>
-      </div>
-    </div>
-    <div class="credit-wrapper flex-spb">
-      <ul class="social">
-        <li class="tt-uc"><a class="col-wh" href="">FB</a></li>
-        <li class="tt-uc"><a class="col-wh" href="">TW</a></li>
-        <li class="tt-uc"><a class="col-wh" href="">Instagram</a></li>
-      </ul>
-      <p class="fs-sm tt-uc">© 2017 Workinzen. Tous droits réservés</p>
-    </div>
-  </footer>
+  </div>
+  <div class="credit-wrapper flex-spb">
+    <ul class="social">
+      <li class="tt-uc"><a class="col-wh" href="">FB</a></li>
+      <li class="tt-uc"><a class="col-wh" href="">TW</a></li>
+      <li class="tt-uc"><a class="col-wh" href="">Instagram</a></li>
+    </ul>
+    <p class="fs-sm tt-uc col-dwh">© 2017 Workinzen. Tous droits réservés</p>
+  </div>
+</footer>
 {% endblock %}
