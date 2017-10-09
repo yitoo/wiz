@@ -124,10 +124,10 @@ Atomic styles
 .mr-sm{
 	margin-right: 30px;
 }
-
 .mb-xs{
 	margin-bottom: 15px;
 }
+
 
 .flex-center{
 	-webkit-box-align: center;
@@ -194,8 +194,8 @@ h3 {
 	font-size: 20px;
 }
 
-.intro-block{
-	background: url('../images/typewriter.jpg') no-repeat center;
+.main-block{
+	background: url('../images/typewriter.jpg') no-repeat 0 center;
 	background-size: cover;
 	height: 100%;
 	top: 0;
@@ -207,7 +207,15 @@ h3 {
 	        box-sizing: border-box;
 }
 
-.intro-content{
+.practitioner-bg {
+	background: url('../images/practitioner.jpg') no-repeat center;
+}
+
+.company-bg {
+	background: url('../images/company.jpg') no-repeat center 0;
+}
+
+.main-content{
 	height: 400px;
 	z-index: 1;
 }
@@ -220,6 +228,10 @@ h3 {
 	top: 0;
 	left: 0;
 	width: 100%;
+}
+
+.opacity4 {
+	opacity: 0.4;
 }
 
 .chapo, .button-list {
