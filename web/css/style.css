@@ -220,14 +220,17 @@ h3 {
 
 .practitioner-bg {
 	background: url('../images/practitioner.jpg') no-repeat bottom;
+	background-size: cover;
 }
 
 .company-bg {
 	background: url('../images/company.jpg') no-repeat center 0;
+	background-size: cover;
 }
 
 .subscription-success-bg {
 	background: url('../images/practitioner.jpg') no-repeat bottom;
+	background-size: cover;
 }
 
 .main-content{
