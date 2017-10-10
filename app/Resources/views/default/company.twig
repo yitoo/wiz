@@ -12,8 +12,8 @@
       </h2>
       <form method="post" action="{{ url('company_signup') }}">
         <div class="item-wrapper">
-          <input name="company" class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre entreprise" type="text"/>
-          <input name="email" class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre adresse e-mail" type="email"/>
+          <input name="company" required class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre entreprise" type="text"/>
+          <input name="email" required class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre adresse e-mail" type="email"/>
           <button class="button valid-button" type="submit">OK</button>
         </div>
       </form>

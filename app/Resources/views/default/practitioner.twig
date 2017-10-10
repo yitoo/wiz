@@ -12,8 +12,8 @@
       </h2>
       <form method="post" action="{{ url('practitioner_signup') }}">
         <div class="item-wrapper">
-          <input name="fullName" class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre nom" type="text"/>
-          <input name="email" class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre adresse e-mail" type="email"/>
+          <input name="fullName" required class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre nom" type="text"/>
+          <input name="email" required class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre adresse e-mail" type="email"/>
           <button class="button valid-button" type="submit">OK</button>
         </div>
       </form>

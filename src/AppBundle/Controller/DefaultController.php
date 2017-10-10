@@ -31,24 +31,11 @@ class DefaultController extends Controller
      */
     public function practitionerSignUpAction(Request $request)
     {
-        $fullName = $request->request->get('fullName');
-        $email = $request->request->get('email');
-        $message = (new \Swift_Message('WorkInZen'))
-            ->setFrom('virginie@workinzen.fr', 'Virginie Plé')
-            ->setTo($email)
-            ->setBody(
-                $this->renderView(
-                    ':emails:practitioner_signup.html.twig',
-                    array('name' => $fullName)
-                ),
-                'text/html'
-            )
-        ;
-        $this->get('mailer')->send($message);
+        if (!$request->request->get('email') || !$request->request->get('fullName')) {
+            return $this->redirectToRoute('practitioner');
+        }
 
-        $this->addFlash('info', "Merci $fullName, nous vous avons envoyé un email à l'adresse $email");
-
-        return $this->redirectToRoute('signup_success');
+        return $this->doSignUp('practitioner', $request);
     }
 
     /**
@@ -66,24 +53,11 @@ class DefaultController extends Controller
      */
     public function companySignUpAction(Request $request)
     {
-        $fullName = $request->request->get('company');
-        $email = $request->request->get('email');
-        $message = (new \Swift_Message('WorkInZen'))
-            ->setFrom('virginie@workinzen.fr', 'Virginie Plé')
-            ->setTo($email)
-            ->setBody(
-                $this->renderView(
-                    ':emails:company_signup.html.twig',
-                    array('name' => $fullName)
-                ),
-                'text/html'
-            )
-        ;
-        $this->get('mailer')->send($message);
+        if (!$request->request->get('email') || !$request->request->get('company')) {
+            return $this->redirectToRoute('company');
+        }
 
-        $this->addFlash('info', "Merci $fullName, nous vous avons envoyé un email à l'adresse $email");
-
-        return $this->redirectToRoute('signup_success');
+        return $this->doSignUp('company', $request);
     }
 
     /**
@@ -91,6 +65,10 @@ class DefaultController extends Controller
      */
     public function signUpSuccessAction()
     {
+        if (!$this->container->get('session')->getFlashBag()->has('signup_success')) {
+            return $this->redirectToRoute('homepage');
+        }
+
         return $this->render('default/signup_success.twig');
     }
 
@@ -100,5 +78,34 @@ class DefaultController extends Controller
     public function legalMentionsAction()
     {
         return $this->render('default/legal_mentions.twig');
+    }
+
+    private function doSignUp($profile, Request $request)
+    {
+        if ($profile == 'company') {
+            $profileName = $request->request->get('company');
+            $view = ':emails:company_signup.html.twig';
+        } else {
+            $profileName = $request->request->get('fullName');
+            $view = ':emails:practitioner_signup.html.twig';
+        }
+
+        $email = $request->request->get('email');
+        $message = (new \Swift_Message('WorkInZen'))
+            ->setFrom('virginie@workinzen.fr', 'Virginie Plé')
+            ->setTo($email)
+            ->setBody(
+                $this->renderView(
+                    $view,
+                    array('name' => $profileName)
+                ),
+                'text/html'
+            )
+        ;
+        $this->get('mailer')->send($message);
+
+        $this->addFlash('signup_success', "Merci $profileName, nous vous avons envoyé un email à l'adresse $email");
+
+        return $this->redirectToRoute('signup_success');
     }
 }

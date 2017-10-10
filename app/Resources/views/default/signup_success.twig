@@ -6,7 +6,7 @@
       <img src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo short">
       <h1>Votre inscription</h1>
       <h2 class="chapo col-dwh">
-          {% for message in app.flashes('info') %}
+          {% for message in app.flashes('signup_success') %}
               {{ message }}
           {% endfor %}
       </h2>
