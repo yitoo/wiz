@@ -278,7 +278,7 @@ h3 {
 	opacity: 0.7;
 }
 
-.chapo, .list {
+.chapo, .button-list {
 	width: 560px;
 }
 
@@ -292,7 +292,6 @@ h3 {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-
 }
 
 .button {
@@ -303,6 +302,8 @@ h3 {
 	font-family: "MoskExtra-Bold", sans-serif;
 	letter-spacing: 1px;
 	padding: 16px 45px;
+	width: 183px;
+	text-align: center;
 }
 
 .user-block {
@@ -516,6 +517,17 @@ footer{
 
 .social li {
 	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.icon {
+	font-size : 12px;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 13px;
+	background-color: #000000;
+	text-align: center;
 }
 
 @media (max-width:580px) {
