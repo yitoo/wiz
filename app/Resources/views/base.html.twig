@@ -1,13 +1,118 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  {% set title = "WorkInZen" %}
+  {% set description = "tout simlement" %}
+  <meta name="google-site-verification" content="O8e8w3lCJkLMjPtYuGwP_snLOBtWinaHVtG01jS_xyY" />
+
+  <title>{% block title %}{{ title }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ description }}{% endblock %}">
+  <meta name="author" content="Workinzen">
+  <meta property="og:title" content="{% block ogTitle %}{{ title }}{% endblock %}" />
+  <meta property="og:type" content="{% block ogType %}website{% endblock %}" />
+  <meta property="og:url" content="{% block ogUrl %}https://workinzen.fr{% endblock %}" />
+  <meta property="og:image" content="{% block ogImage %}{{ app.request.schemeAndHttpHost ~ asset('images/workinzen-logo.png') }}{% endblock %}" />
+  <meta property="og:description" content="{% block ogDescription %}{{ description }}{% endblock %}" />
+  <meta property="og:site_name" content="{% block ogSiteName %}Workinzen{% endblock %}" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{% block twitterTitle %}{{ title }}{% endblock %}" />
+  <meta name="twitter:url" content="{% block twitterUrl %}https://workinzen.fr{% endblock %}" />
+  <meta name="twitter:description" content="{% block twitterDescription %}{{ description }}{% endblock %}" />
+  <meta name="twitter:image" content="{% block twitterImage %}{{ app.request.schemeAndHttpHost ~ asset('images/workinzen-logo.png') }}{% endblock %}" />
+  <meta name="twitter:image:alt" content="{% block twitterAltImage %}Workinzen logo{% endblock %}">
+  <meta name="twitter:site" content="@workinzen">
+  <meta name="twitter:creator" content="Workinzen">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('favicons/apple-icon-57x57.png') }}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('favicons/apple-icon-60x60.png') }}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('favicons/apple-icon-72x72.png') }}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('favicons/apple-icon-76x76.png') }}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('favicons/apple-icon-114x114.png') }}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('favicons/apple-icon-120x120.png') }}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('favicons/apple-icon-144x144.png') }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('favicons/apple-icon-152x152.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicons/apple-icon-180x180.png') }}">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('favicons/android-icon-192x192.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicons/favicon-96x96.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
+  <link rel="manifest" href="{{ asset('favicaon/manifest.json') }}">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="msapplication-TileImage" content="{{ asset('favicons//ms-icon-144x144.png') }}">
+  <meta name="theme-color" content="#000000">
+</head>
+<body>
+  <header>
+    <a href="{{ url('homepage') }}"><img src="{{ asset('images/workinzen-logo.png') }}" alt="Workinzen logo"></a>
+    <p class="col-dwh">Tout simplement</p>
+  </header>
+  {% block body %}{% endblock %}
+  <div class="footer-shadow shadow"></div>
+  <footer>
+    <div class="brand-wrapper">
+      <img class="footer-logo" src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo">
+      <div class="contact-wrapper flex-spb">
+        <a class="col-dwh" href="{{ url('legal_mentions') }}">Mentions légales</a>
+      </div>
+    </div>
+    <div class="credit-wrapper flex-spb">
+      <ul class="social">
+        <li class="tt-uc"><a class="col-wh" target="_blank" href="https://www.facebook.com/workinzen"><img src="{{ asset('images/facebook.png') }}" alt="follow us on facebook"></a></li>
+        <li class="tt-uc ml-xs"><a class="col-wh" target="_blank" href="https://twitter.com/workinzen"><img src="{{ asset('images/twitter.png') }}" alt="follow us on twitter"></a></li>
+        <li class="tt-uc ml-xs"><a class="col-wh" target="_blank" href="https://www.linkedin.com/company/workinzen"><img src="{{ asset('images/linkedin.png') }}" alt="follow us on linkedin"></a></li>
+      </ul>
+      <p class="fs-sm tt-uc col-dwh">© 2017 Workinzen. Tous droits réservés</p>
+    </div>
+  </footer>
+  {% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  {% endblock stylesheets %}
+  {% block javascript %}
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107774117-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-107774117-1');
+    </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59da0a1299fbef09"></script>
+    <script type="application/ld+json">
+    { "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Workinzen",
+    "legalName" : "Workinzen SAS",
+    "url": "https://www.workinzen.fr",
+    "logo": "{{ app.request.schemeAndHttpHost ~ asset('images/workinzen-logo.png') }}",
+    "foundingDate": "2017",
+    "founders": [
+      {
+        "@type": "Person",
+        "name": "Virginie PLÉ",
+        "jobTitle": "CEO"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "11 Avenue des champs élysées",
+      "addressLocality": "75008",
+      "postalCode": "PARIS",
+      "addressCountry": "FR"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "telephone": "[+33 1 86 95 96 04]",
+      "email": "virginie@workinzen.fr"
+    },
+    "sameAs": [
+      "https://twitter.com/workinzen",
+      "https://www.facebook.com/workinzen",
+      "https://www.linkedin.com/company/workinzen"
+    ]}
+    </script>
+  {% endblock %}
+</body>
 </html>

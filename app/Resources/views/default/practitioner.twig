@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <section class="main-block practitioner-bg flex-center">
+    <div class="shadow opacity7"></div>
+    <div class="main-content flex-spb col-wh">
+      <img src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo short">
+      <h1>Je suis un praticien</h1>
+      <h2 class="chapo col-dwh">
+        Pour travailler dans un environnement saint et apaisant
+        ou vous voulez offrir, Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit sed do eiusmod.
+      </h2>
+      <form method="post" action="{{ url('practitioner_signup') }}">
+        <div class="item-wrapper">
+          <input name="fullName" required class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre nom" type="text"/>
+          <input name="email" required class="textfield bgcol-wh col-lgr mr-sm" placeholder="Votre adresse e-mail" type="email"/>
+          <button class="button valid-button" type="submit">OK</button>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <section class="main-block practitioner-bg flex-center">
+    <div class="shadow opacity7"></div>
+    <div class="main-content flex-spb col-wh">
+      <img src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo short">
+      <h1>Votre inscription</h1>
+      <h2 class="chapo col-dwh">
+          {% for message in app.flashes('signup_success') %}
+              {{ message }}
+          {% endfor %}
+      </h2>
+      <hr>
+      <h2>Partager</h2>
+      <div class="addthis_inline_share_toolbox"></div>
+    </div>
+  </section>
+{% endblock %}
