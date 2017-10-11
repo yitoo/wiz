@@ -5,6 +5,7 @@
   {% set title = "WorkInZen" %}
   {% set description = "tout simlement" %}
   <meta name="google-site-verification" content="O8e8w3lCJkLMjPtYuGwP_snLOBtWinaHVtG01jS_xyY" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
   <title>{% block title %}{{ title }}{% endblock %}</title>
   <meta name="description" content="{% block description %}{{ description }}{% endblock %}">
@@ -45,7 +46,13 @@
 </head>
 <body>
   <header>
-    <a href="{{ url('homepage') }}"><img src="{{ asset('images/workinzen-logo.png') }}" alt="Workinzen logo"></a>
+    <a href="{{ url('homepage') }}">
+      <picture>
+        <source media="(min-width: 580px)" srcset="{{ asset('images/workinzen-logo.png') }}">
+        <source srcset="{{ asset('images/workinzen-logo-sm.png') }}">
+        <img class="logo" src="{{ asset('images/workinzen-logo.png') }}" alt="Workinzen logo">
+      </picture>
+    </a>
     <p class="col-dwh">Tout simplement</p>
   </header>
   {% block body %}{% endblock %}

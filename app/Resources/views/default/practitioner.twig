@@ -3,8 +3,12 @@
   <section class="main-block practitioner-bg flex-center">
     <div class="shadow opacity7"></div>
     <div class="main-content flex-spb col-wh">
-      <img src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo short">
-      <h1>Je suis un praticien</h1>
+        <picture>
+          <source media="(min-width: 580px)" srcset="{{ asset('images/workinzen-logo-short.png') }}">
+          <source srcset="{{ asset('images/workinzen-logo-short-sm.png') }}">
+          <img class="short-logo" src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo">
+        </picture>
+        <h1>Je suis un praticien</h1>
       <h2 class="chapo col-dwh">
         Pour travailler dans un environnement saint et apaisant
         ou vous voulez offrir, Lorem ipsum dolor sit amet, consectetur
