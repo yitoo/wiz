@@ -178,6 +178,7 @@ header{
 	z-index: 2;
 	padding-left: 55px;
 	padding-top: 20px;
+	box-sizing: border-box;
 }
 
 header p {
@@ -403,6 +404,7 @@ h3 {
 	.item-wrapper, .button-list {
 		flex-direction: column;
 		height: 150px;
+		width: 100%;
 	}
 	.textfield, .button {
 		margin-right: 0;
