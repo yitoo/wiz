@@ -3,7 +3,11 @@
 <section class="main-block flex-center">
   <div class="shadow"></div>
   <div class="main-content flex-spb col-wh">
-    <img src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo short">
+    <picture>
+      <source media="(min-width: 580px)" srcset="{{ asset('images/workinzen-logo-short.png') }}">
+      <source srcset="{{ asset('images/workinzen-logo-short-sm.png') }}">
+      <img class="short-logo" src="{{ asset('images/workinzen-logo-short.png') }}" alt="Workinzen logo">
+    </picture>
     <h1>Workinzen, tout simplement</h1>
     <h2 class="chapo col-dwh">
       Pour travailler dans un environnement sain et apaisant
