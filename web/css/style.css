@@ -185,10 +185,8 @@ header{
 	text-align: left;
 }
 
-header p {
-	margin-left: 5px;
-	letter-spacing: 1px;
-	font-size: 12px;
+.logo {
+	width: 200px;
 }
 
 h1 {
