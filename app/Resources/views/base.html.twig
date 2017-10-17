@@ -5,6 +5,7 @@
   {% set title = "WorkInZen" %}
   {% set description = "tout simlement" %}
   <meta name="google-site-verification" content="O8e8w3lCJkLMjPtYuGwP_snLOBtWinaHVtG01jS_xyY" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
 
   <title>{% block title %}{{ title }}{% endblock %}</title>
   <meta name="description" content="{% block description %}{{ description }}{% endblock %}">
@@ -38,15 +39,19 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
   <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('favicons/favicon-96x96.png') }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
-  <link rel="manifest" href="{{ asset('favicaon/manifest.json') }}">
+  <link rel="manifest" href="{{ asset('favicons/manifest.json') }}">
   <meta name="msapplication-TileColor" content="#000000">
   <meta name="msapplication-TileImage" content="{{ asset('favicons//ms-icon-144x144.png') }}">
   <meta name="theme-color" content="#000000">
 </head>
 <body>
   <header>
-    <a href="{{ url('homepage') }}"><img src="{{ asset('images/workinzen-logo.png') }}" alt="Workinzen logo"></a>
-    <p class="col-dwh">Tout simplement</p>
+    <a href="{{ url('homepage') }}">
+      <picture>
+        <source srcset="{{ asset('images/workinzen-logo.png') }}">
+        <img class="logo" src="{{ asset('images/workinzen-logo.png') }}" alt="Workinzen logo">
+      </picture>
+    </a>
   </header>
   {% block body %}{% endblock %}
   <div class="footer-shadow shadow"></div>
@@ -59,9 +64,10 @@
     </div>
     <div class="credit-wrapper flex-spb">
       <ul class="social">
-        <li class="tt-uc"><a class="col-wh" target="_blank" href="https://www.facebook.com/workinzen"><img src="{{ asset('images/facebook.png') }}" alt="follow us on facebook"></a></li>
-        <li class="tt-uc ml-xs"><a class="col-wh" target="_blank" href="https://twitter.com/workinzen"><img src="{{ asset('images/twitter.png') }}" alt="follow us on twitter"></a></li>
-        <li class="tt-uc ml-xs"><a class="col-wh" target="_blank" href="https://www.linkedin.com/company/workinzen"><img src="{{ asset('images/linkedin.png') }}" alt="follow us on linkedin"></a></li>
+        <li class="tt-uc"><a class="col-wh" target="_blank" href="https://www.facebook.com/workinzen"><i class="icon fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li class="tt-uc ml-xs"><a class="col-wh" target="_blank" href="https://twitter.com/workinzen"><i class="icon fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li class="tt-uc ml-xs"><a class="col-wh" target="_blank" href="https://www.linkedin.com/company/workinzen"><i class="icon fa fa-linkedin" aria-hidden="true"></i>
+</a></li>
       </ul>
       <p class="fs-sm tt-uc col-dwh">© 2017 Workinzen. Tous droits réservés</p>
     </div>
@@ -77,7 +83,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-107774117-1');
-    </script>
+    </script><script src="https://use.fontawesome.com/4c6a6bb0e0.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59da0a1299fbef09"></script>
     <script type="application/ld+json">
     { "@context": "http://schema.org",
