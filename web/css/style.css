@@ -309,7 +309,7 @@ h3 {
 	font-family: "MoskExtra-Bold", sans-serif;
 	letter-spacing: 1px;
 	padding: 16px 45px;
-	width: 183px;
+	width: 275px;
 	text-align: center;
 }
 
@@ -403,6 +403,7 @@ box-sizing: border-box;
 
 .valid-button {
 	cursor: pointer;
+	width: 183px;
 }
 
 @media (max-width:1024px) {
