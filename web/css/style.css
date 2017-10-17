@@ -303,6 +303,7 @@ h3 {
 .button {
 	background-color: #ffa998;
 	border-radius: 25px;
+	box-sizing: border-box;
 	display: inline-block;
 	font-size: 12px;
 	font-family: "MoskExtra-Bold", sans-serif;
@@ -366,6 +367,7 @@ h3 {
 }
 
 .textfield {
+box-sizing: border-box;
 	border-radius: 25px;
 	display: inline-block;
 	font-size: 14px;
@@ -401,8 +403,6 @@ h3 {
 
 .valid-button {
 	cursor: pointer;
-	padding-left: 24px;
-	padding-right: 24px;
 }
 
 @media (max-width:1024px) {
@@ -416,6 +416,7 @@ h3 {
 	}
 	.textfield, .button {
 		margin-right: 0;
+		width: 440px;
 	}
 	.main-content {
 		height: 450px;
@@ -430,23 +431,9 @@ h3 {
 	.short-logo {
 		display: none;
 	}
-	.item-wrapper {
-		height: 110px;
-	}
-	.button-list{
-		height: 70px;
-	}
 	.textfield, .button {
-		width: 200px;
-		padding: 10px 30px;
-		font-size: 10px;
+		width: 290px;
 		text-align: center;
-	}
-	.valid-button{
-		width: auto;
-		padding-left: 20px;
-		padding-right: 20px;
-		align-self: flex-end;
 	}
 	.main-content {
 		height: 320px;
