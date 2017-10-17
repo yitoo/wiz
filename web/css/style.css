@@ -427,7 +427,6 @@ box-sizing: border-box;
 @media (max-width:580px) {
 	.logo {
 		margin: 0 auto;
-		width: 135px;
 	}
 	.short-logo {
 		display: none;

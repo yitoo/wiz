@@ -48,12 +48,10 @@
   <header>
     <a href="{{ url('homepage') }}">
       <picture>
-        <source media="(min-width: 580px)" srcset="{{ asset('images/workinzen-logo.png') }}">
-        <source srcset="{{ asset('images/workinzen-logo-sm.png') }}">
+        <source srcset="{{ asset('images/workinzen-logo.png') }}">
         <img class="logo" src="{{ asset('images/workinzen-logo.png') }}" alt="Workinzen logo">
       </picture>
     </a>
-    <p class="col-dwh">Tout simplement</p>
   </header>
   {% block body %}{% endblock %}
   <div class="footer-shadow shadow"></div>
